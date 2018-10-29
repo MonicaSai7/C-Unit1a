@@ -60,6 +60,6 @@ void replicateNumbers(int numbers[], int size, int replicates[]) {
 // e.g:
 // 20  => 2002
 //
-long int butterflyNumber(int n) {
+long long int butterflyNumber(int n) {
     return -999;
 }
