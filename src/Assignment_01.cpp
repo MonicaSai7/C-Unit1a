@@ -6,14 +6,26 @@ Note:
 */
 
 
+//
+// Write a function to calculate the average of 'n' numbers
+//
+int averageOfN(int numbers[], int n) {
+    return -999;
+}
+
 
 //
-// Write a function that finds the first 100 positive integers
-// that are palindromes in base b.
+// Write a function that finds the positive integers up to 100
+// that are palindromes in base b
 //
-// 1 < b < 256
+// b > 1
+// saves a list of base–10 numbers less than or equal to 100
+// that are palindromic in base b.
+// and the count is returned.
 //
-void first100PalindromicNumbers(int b, int palindromes[100]) {
+// e.g:
+// TODO: fill example for base 2
+int palindromeNumbers(int b, int numbers[100]) {
     
 }
 
@@ -21,7 +33,7 @@ void first100PalindromicNumbers(int b, int palindromes[100]) {
 // Write a function that finds the first 20 positive integers
 // that are palindromes primes in base b.
 //
-// 1 < b < 256
+// b > 1
 //
 // https://en.wikipedia.org/wiki/Palindromic_prime
 //
@@ -44,7 +56,7 @@ void closestEvenNumbers(int n, int evens[5]) {
 // Write a function that finds the closest 5 positive integers
 // that are palindromes in base b.
 //
-// 1 < b < 256
+// b > 1
 //
 // return a sorted list of assending order.
 //

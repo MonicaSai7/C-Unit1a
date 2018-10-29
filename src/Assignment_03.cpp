@@ -36,30 +36,15 @@ void decodeWithPalindromPrime(int encodedMessage[8], int k, int b, int message[8
     
 }
 
-
-//
-//
-// Write a function that takes an array and
-// replicates each of its numbers according to their positions in the array.
-//
-// e.g:
-// {5, 6, 2} => {5, 6, 6, 2, 2, 2}
-//
-// Note:
-//  The positions start with 1, not like C-Array's position.
-//  Appropriate size for the output array replicates will be given.
-//
-void replicateNumbers(int numbers[], int size, int replicates[]) {
-    
-}
-
-
 //
 // butterfly number for the given number
 //
 // e.g:
-// 20  => 2002
+// 20  => "2002"
 //
-long int butterflyNumber(int n) {
-    return -999;
+// To get butterfly number for the given number 20,
+// take its reversal 02 and join them to form "2002".
+//
+void butterflyNumber(int n, char butterfly[22]) {
+    
 }

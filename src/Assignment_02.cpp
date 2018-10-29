@@ -6,21 +6,24 @@
 //
 // http://oeis.org/A005132
 //
-
-void recamanSequence(int sequence[100]) {
+// Wrtie a function to find the first n numbers in this sequence
+//
+void recamanSequence(int n, int sequence[]) {
     
 }
 
 
 //
-// Mersenne exponents:
-// primes p such that 2^p - 1 is prime. Then 2^p - 1 is called a Mersenne prime.
+// Mersenne Primes:
+// p is prime and 2^p - 1 is also prime. Then 2^p - 1 is called a Mersenne prime.
 //
 // Write a function that finds the first 8 positive integers
-// which are Mersenne exponents.
+// which are Mersenne primes.
 //
-// http://oeis.org/A000043
+// https://en.wikipedia.org/wiki/Mersenne_prime
 //
-void mersenneExponents(int exponents[8]) {
+// Note: Use bitwise operators to compute 2^p.
+//
+void mersennePrimes(int mPrimes[8]) {
     
 }
