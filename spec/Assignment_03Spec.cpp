@@ -33,6 +33,77 @@ namespace spec
 			}
 		};
 
+		/*testcases of NumberWithoutRepeatition goes here!!*/
+		[TestMethod, Timeout(3000)]
+		void A03_NumberWithoutRepeatition_BaseCase()
+		{
+			int a[] = { 1, 1, 2 };
+			int ans = numberWithoutRepeatition(a, 3);
+			Assert::AreEqual(2, ans, L"testcase 2 failed", 1, 2);
+		}
+
+
+
+
+
+
+
+		/*butterfly number testcases goes here */
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Invalid1()
+		{
+			long long N = -405504;
+			long long ans = -1;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase basecase failed", 1, 2);
+		};
+
+		void ButterflyNumber_Invalid2()
+		{
+			long long N = -1;
+			long long ans = -1;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase basecase failed", 1, 2);
+		};
+
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Test1()
+		{
+
+			long long N = 12356;
+			long long ans = 1235665321;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase 1 failed", 1, 2);
+		};
+
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Test2()
+		{
+			long long N = 0;
+			long long ans = 0;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase 2 failed", 1, 2);
+		};
+
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Test3()
+		{
+			long long N = 10000;
+			long long ans = 1000000001;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase 3 failed", 1, 2);
+		};
+
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Test4()
+		{
+			long long N = 10;
+			long long ans = 1001;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase 3 failed", 1, 2);
+		};
+
+		[TestMethod(), Timeout(3000)]
+		void ButterflyNumber_Test5()
+		{
+			long long N = 10000000000000;
+			long long ans = -1;
+			Assert::AreEqual(ans, butterflyNumber(N), L"ButterflyNumber testcase 3 failed", 1, 2);
+		};
 		
 
 	};
