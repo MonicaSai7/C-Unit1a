@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 
-#include "./../src/A01_Functions.cpp"
+#include "./../src/Assignment_03.cpp"
 
 using namespace System;
 using namespace System::Text;
@@ -34,7 +34,7 @@ namespace spec
 		};
 
 		[TestMethod, Timeout(3000)]
-		void Test_()
+		void Test_Sample_A03()
 		{
 			int actual = sum(2, 3);
 			int expected = 5;

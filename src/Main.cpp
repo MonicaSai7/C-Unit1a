@@ -1,13 +1,13 @@
 /*
-Note:
-
-Unit-X Assignment
-
-What you need to do?
-How you need to do?
-
-
+ Note:
+ 
+ Unit-1 Assignment
+ 
+ What you need to do?
+ How you need to do?
+ 
 */
+
 #include <stdlib.h>
 #include <stdio.h>
 

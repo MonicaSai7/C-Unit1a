@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
 
-#include "./../src/A01_Functions.cpp"
+#include "./../src/Assignment_01.cpp"
 
 using namespace System;
 using namespace System::Text;
@@ -32,9 +32,15 @@ namespace spec
 				testContextInstance = value;
 			}
 		};
-
+        
+        //
+        // TODO:
+        // tests for
+        // void first100PalindromeNumbersInBase(int palindromeNumbers[100], int base);
+        // with base - 10, 256, 128, 64, 32, 16, 8, 4, 2
+        //
 		[TestMethod, Timeout(3000)]
-		void Test_()
+		void Test_Sample_A01()
 		{
 			int actual = sum(2, 3);
 			int expected = 5;
