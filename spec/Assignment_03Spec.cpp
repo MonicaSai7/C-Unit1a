@@ -11,7 +11,7 @@ using namespace Microsoft::VisualStudio::TestTools::UnitTesting;
 namespace spec
 {
 	[TestClass]
-	public ref class SumSpec
+	public ref class Assignment_03Spec
 	{
 	private:
 		TestContext^ testContextInstance;
@@ -36,9 +36,6 @@ namespace spec
 		[TestMethod, Timeout(3000)]
 		void Test_Sample_A03()
 		{
-			int actual = sum(2, 3);
-			int expected = 5;
-			Assert::AreEqual(expected, actual, L"Sum(2, 3) failed", 1, 2);
 		}
 	};
 }
