@@ -113,16 +113,16 @@ namespace spec
             char butterfly[23];
             
             butterflyNumber(numbers[0], butterfly);
-            Assert::AreEqual(butterflys[0], butterfly, L"butterfly of " + numbers[0] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[0], butterfly), L"butterfly of " + numbers[0] + L" failed", 1, 2);
             
             butterflyNumber(numbers[1], butterfly);
-            Assert::AreEqual(butterflys[1], butterfly, L"butterfly of " + numbers[1] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[1], butterfly), L"butterfly of " + numbers[1] + L" failed", 1, 2);
             
             butterflyNumber(numbers[2], butterfly);
-            Assert::AreEqual(butterflys[2], butterfly, L"butterfly of " + numbers[2] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[2], butterfly), L"butterfly of " + numbers[2] + L" failed", 1, 2);
             
             butterflyNumber(numbers[3], butterfly);
-            Assert::AreEqual(butterflys[3], butterfly, L"butterfly of " + numbers[3] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
         }
         
         void Test_butterflyNumber1() {
@@ -132,19 +132,19 @@ namespace spec
             char butterfly[23];
             
             butterflyNumber(numbers[0], butterfly);
-            Assert::AreEqual(butterflys[0], butterfly, L"butterfly of " + numbers[0] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[0], butterfly), L"butterfly of " + numbers[0] + L" failed", 1, 2);
             
             butterflyNumber(numbers[1], butterfly);
-            Assert::AreEqual(butterflys[1], butterfly, L"butterfly of " + numbers[1] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[1], butterfly), L"butterfly of " + numbers[1] + L" failed", 1, 2);
             
             butterflyNumber(numbers[2], butterfly);
-            Assert::AreEqual(butterflys[2], butterfly, L"butterfly of " + numbers[2] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[2], butterfly), L"butterfly of " + numbers[2] + L" failed", 1, 2);
             
             butterflyNumber(numbers[3], butterfly);
-            Assert::AreEqual(butterflys[3], butterfly, L"butterfly of " + numbers[3] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
             
             butterflyNumber(numbers[4], butterfly);
-            Assert::AreEqual(butterflys[4], butterfly, L"butterfly of " + numbers[4] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[4], butterfly), L"butterfly of " + numbers[4] + L" failed", 1, 2);
             
         }
         
@@ -155,16 +155,16 @@ namespace spec
             char butterfly[23];
             
             butterflyNumber(numbers[0], butterfly);
-            Assert::AreEqual(butterflys[0], butterfly, L"butterfly of " + numbers[0] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[0], butterfly), L"butterfly of " + numbers[0] + L" failed", 1, 2);
             
             butterflyNumber(numbers[1], butterfly);
-            Assert::AreEqual(butterflys[1], butterfly, L"butterfly of " + numbers[1] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[1], butterfly), L"butterfly of " + numbers[1] + L" failed", 1, 2);
             
             butterflyNumber(numbers[2], butterfly);
-            Assert::AreEqual(butterflys[2], butterfly, L"butterfly of " + numbers[2] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[2], butterfly), L"butterfly of " + numbers[2] + L" failed", 1, 2);
             
             butterflyNumber(numbers[3], butterfly);
-            Assert::AreEqual(butterflys[3], butterfly, L"butterfly of " + numbers[3] + L" failed", 1, 2);
+            Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
             
         }
         

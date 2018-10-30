@@ -40,7 +40,7 @@ void butterflyNumber(int n, char butterfly[23]) {
 // e.g:
 // TODO: fill example for base 2
 int palindromeNumbers(int b, int numbers[]) {
-    
+    return -999;
 }
 
 //
