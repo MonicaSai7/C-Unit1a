@@ -143,17 +143,13 @@ namespace spec
             
             butterflyNumber(numbers[3], butterfly);
             Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
-            
-            butterflyNumber(numbers[4], butterfly);
-            Assert::AreEqual(true, areEqualStrings(butterflys[4], butterfly), L"butterfly of " + numbers[4] + L" failed", 1, 2);
-            
         }
         
         [TestMethod, Timeout(3000)]
         void Test_butterflyNumber2() {
             
-            int numbers[] = {2147483647, -2147483648, -2147483600, 2147483600};
-            char *butterflys[] = {"21474836477463847412", "-21474836488463847412-", "-21474836000063847421-", "21474836000063847412"};
+            int numbers[] = {2147483647, -2147483600, 2147483600};
+            char *butterflys[] = {"21474836477463847412", "-21474836000063847412-", "21474836000063847412"};
             char butterfly[23];
             
             butterflyNumber(numbers[0], butterfly);
@@ -164,9 +160,6 @@ namespace spec
             
             butterflyNumber(numbers[2], butterfly);
             Assert::AreEqual(true, areEqualStrings(butterflys[2], butterfly), L"butterfly of " + numbers[2] + L" failed", 1, 2);
-            
-            butterflyNumber(numbers[3], butterfly);
-            Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
             
         }
         
@@ -227,7 +220,7 @@ namespace spec
             
             count = palindromeNumbers(bases[5], output);
             Assert::AreEqual(numberOfPalindromes[5], count, L"Number of palindromes wrong for base:" + bases[5] + ".", 1, 2);
-            result = areEqualArrays(expected[0], output, count);
+            result = areEqualArrays(expected[5], output, count);
             Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[5] + ") failed", 1, 2);
         }
 	};
