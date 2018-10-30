@@ -15,17 +15,31 @@ int averageOfN(int numbers[], int n) {
 
 
 //
+// butterfly number for the given integer
+//
+// e.g:
+// 20  => "2002"
+// -2  => "-22-"
+//
+// To get butterfly number for the given number 20,
+// take its reversal 02 and join them to form "2002".
+//
+void butterflyNumber(int n, char butterfly[23]) {
+    
+}
+
+//
 // Write a function that finds the positive integers up to 100
 // that are palindromes in base b
 //
 // b > 1
 // saves a list of base–10 numbers less than or equal to 100
 // that are palindromic in base b.
-// and the count is returned.
+// and return the count.
 //
 // e.g:
 // TODO: fill example for base 2
-int palindromeNumbers(int b, int numbers[100]) {
+int palindromeNumbers(int b, int numbers[]) {
     
 }
 

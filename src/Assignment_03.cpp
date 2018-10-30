@@ -37,14 +37,20 @@ void decodeWithPalindromPrime(int encodedMessage[8], int k, int b, int message[8
 }
 
 //
-// butterfly number for the given number
+// Encode data and flags in packet header
 //
-// e.g:
-// 20  => "2002"
+// From Left to Right the data and flags are packed as follows:
+// fromMobileId   - 7 bits
+// toMobileId     - 7 bits
+// msgId          - 7 bits
+// msgLen         - 7 bits
+// reserved       - 2 bits
+// urgent         - 1 flag bit
+// adHoc          - 1 flag bit
 //
-// To get butterfly number for the given number 20,
-// take its reversal 02 and join them to form "2002".
-//
-void butterflyNumber(int n, char butterfly[22]) {
-    
+// Note:
+// The values will be in the range
+// 0 <= fromMobileId, toMobileId, msgId, msgLen <= 127
+unsigned int packedHeader(int fromMobileId, int toMobileId, int msgId, int msgLen, bool urgent, bool adHoc) {
+    return 0;
 }
