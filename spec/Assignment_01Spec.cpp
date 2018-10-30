@@ -106,7 +106,6 @@ namespace spec
         //
         
         [TestMethod, Timeout(3000)]
-        
         void Test_butterflyNumber0() {
             
             int numbers[] = {123, 59, 202, 980214};
@@ -126,6 +125,7 @@ namespace spec
             Assert::AreEqual(true, areEqualStrings(butterflys[3], butterfly), L"butterfly of " + numbers[3] + L" failed", 1, 2);
         }
         
+        [TestMethod, Timeout(3000)]
         void Test_butterflyNumber1() {
             
             int numbers[] = {20, -2, 0, -9090};
@@ -149,6 +149,7 @@ namespace spec
             
         }
         
+        [TestMethod, Timeout(3000)]
         void Test_butterflyNumber2() {
             
             int numbers[] = {2147483647, -2147483648, -2147483600, 2147483600};
