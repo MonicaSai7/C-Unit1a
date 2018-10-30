@@ -55,7 +55,7 @@ namespace spec
             for (int i = 0; i < n; i++) {
                 str[i] = digits[i] + '0';
             }
-            str[n] = '\n';
+            str[n] = '\0';
         }
         
         [TestMethod, Timeout(3000)]
