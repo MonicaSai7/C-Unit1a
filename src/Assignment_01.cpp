@@ -38,7 +38,12 @@ void butterflyNumber(int n, char butterfly[23]) {
 // and return the count.
 //
 // e.g:
-// TODO: fill example for base 2
+// 10 => { 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99}, 18 palindromes
+// 2  => { 1, 3, 5, 7, 9, 15, 17, 21, 27, 31, 33, 45, 51, 63, 65, 73, 85, 93, 99}, 19 palindromes
+//
+// Once you have completed this function, check this reference.
+// Ref: http://www.worldofnumbers.com/nobase10.htm
+//
 int palindromeNumbers(int b, int numbers[]) {
     return -999;
 }
@@ -62,7 +67,17 @@ void first20PalindromicPrimes(int b, int palindromes[20]) {
 //
 // return a sorted list of assending order.
 //
-void closestEvenNumbers(int n, int evens[5]) {
+// Note:
+// In case of conflict return the smallest number.
+// let us say for the 5th element, 2 numbers are at same distance from n.
+// then include the smallest of the 2 numbers.
+//
+// e.g:
+// 14  => { 8, 10, 12, 16, 18}; // 8 and 20 are at equal distance from 14, we pick 8.
+// 15  => { 10, 12, 14, 16, 18}; // 10 and 20 are at equal distance from 15, we pick 10.
+//
+
+void closest4EvenNumbers(int n, int evens[5]) {
     
 }
 
@@ -74,6 +89,11 @@ void closestEvenNumbers(int n, int evens[5]) {
 //
 // return a sorted list of assending order.
 //
-void closestPalindromeNumbers(int evens[5], int b) {
+// Note:
+// In case of conflict return the smallest number.
+// let us say for the 5th element, 2 numbers are at same distance from n.
+// then include the smallest of the 2 numbers.
+//
+void closest5PalindromeNumbers(int n, int b, int palindromes[5]) {
     
 }
