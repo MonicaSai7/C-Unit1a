@@ -2,6 +2,7 @@
 
 
 #include "./../src/Assignment_01.cpp"
+#include "TestHelperMethods.h"
 
 using namespace System;
 using namespace System::Text;
