@@ -11,28 +11,28 @@ int numberWithoutRepeatition(int numbers[], int size) {
 
 //
 // encode an array of numbers by doing
-// XOR with k'th palindrome prime in base b
+// XOR with n'th prime number
 // and subtract 1
 //
 // output the encode numbers in encodedMessage[8] array.
 //
 // e.g:
-// for 5'th prime in base 10
+// for 5'th prime
 // encoding will be
 // (message[i] ^ 11) - 1
-// since 11 is the 5'th prime in base 10. // 2, 3, 5, 7, 11...
+// since 11 is the 5'th prime. // 2, 3, 5, 7, 11...
 //
-void encodeWithPalindromPrime(int message[8], int k, int b, int encodedMessage[8]) {
+void encodeWithPrime(int message[8], int n, int encodedMessage[8]) {
     
 }
 
 //
-// decode an array of numbers
-// which are encoded using above encodeWithPalindromPrime function.
+// decode an array of numbers in
+// which are encoded using above encodeWithPrime function.
 //
-// output the decoded numbers in message[8] array.
+// output the decoded numbers in decodedMessage[8] array.
 //
-void decodeWithPalindromPrime(int encodedMessage[8], int k, int b, int message[8]) {
+void decodeWithPrime(int message[8], int n, int decodedMessage[8]) {
     
 }
 
@@ -51,6 +51,13 @@ void decodeWithPalindromPrime(int encodedMessage[8], int k, int b, int message[8
 // Note:
 // The values will be in the range
 // 0 <= fromMobileId, toMobileId, msgId, msgLen <= 127
-unsigned int packedHeader(int fromMobileId, int toMobileId, int msgId, int msgLen, bool urgent, bool adHoc) {
+unsigned int packHeader(int fromMobileId, int toMobileId, int msgId,
+                        int msgLen, bool urgent, bool adHoc) {
     return 0;
+}
+
+// unpack a given header, with the properties like the above
+void unpackHeader(unsigned int header, int *pFromMobileId, int *pToMobileId,
+                  int *pMsgId, int *pMsgLen, bool *pUrgent, bool *pAdHoc) {
+    
 }

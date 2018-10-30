@@ -33,19 +33,3 @@ int factorialOfN(int n, int factorialDigits[158]) {
 void recamanSequence(int n, int sequence[]) {
     
 }
-
-
-//
-// Mersenne Primes:
-// p is prime and 2^p - 1 is also prime. Then 2^p - 1 is called a Mersenne prime.
-//
-// Write a function that finds the first 8 positive integers
-// which are Mersenne primes.
-//
-// https://en.wikipedia.org/wiki/Mersenne_prime
-//
-// Note: Use bitwise operators to compute 2^p.
-//
-void mersennePrimes(int mPrimes[8]) {
-    
-}

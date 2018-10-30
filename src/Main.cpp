@@ -11,6 +11,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#include "Assignment_01.h"
+#include "Assignment_02.h"
+#include "Assignment_03.h"
+
 int main(){
 	printf("Welcome to Unit-1 Assignment.\n");
 

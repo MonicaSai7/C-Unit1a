@@ -5,15 +5,6 @@ Note:
 ...
 */
 
-
-//
-// Write a function to calculate the average of 'n' numbers
-//
-int averageOfN(int numbers[], int n) {
-    return -999;
-}
-
-
 //
 // butterfly number for the given integer
 //
@@ -50,7 +41,7 @@ int palindromeNumbers(int b, int numbers[]) {
 
 //
 // Write a function that finds the first 20 positive integers
-// that are palindromes primes in base b.
+// that are palindrome primes in base b.
 //
 // b > 1
 //
@@ -77,7 +68,7 @@ void first20PalindromicPrimes(int b, int palindromes[20]) {
 // 15  => { 10, 12, 14, 16, 18}; // 10 and 20 are at equal distance from 15, we pick 10.
 //
 
-void closest4EvenNumbers(int n, int evens[5]) {
+void closest5EvenNumbers(int n, int evens[5]) {
     
 }
 
