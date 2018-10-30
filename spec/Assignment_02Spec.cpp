@@ -71,23 +71,23 @@ namespace spec
             int numberOfDigits = factorialOfN(numbers[0], factorialDigits);
             Assert::AreEqual(numberOfFactorialDigits[0], numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[0] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed", 1, 2);
 
             
             numberOfDigits = factorialOfN(numbers[1], factorialDigits);
             Assert::AreEqual(numberOfFactorialDigits[1], numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[1] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed", 1, 2);
             
             numberOfDigits = factorialOfN(numbers[2], factorialDigits);
             Assert::AreEqual(numberOfFactorialDigits[2], numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[2] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[2], factorialString), L"factorail(" + numbers[2] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[2], factorialString), L"factorail(" + numbers[2] + ") failed", 1, 2);
             
             numberOfDigits = factorialOfN(numbers[3], factorialDigits);
             Assert::AreEqual(numberOfFactorialDigits[3], numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[3] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[3], factorialString), L"factorail(" + numbers[3] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[3], factorialString), L"factorail(" + numbers[3] + ") failed", 1, 2);
             
         }
         
@@ -107,17 +107,17 @@ namespace spec
             int numberOfDigits = factorialOfN(numbers[0], factorialDigits);
             Assert::AreEqual((int)strlen(factorials[0]), numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[0] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed", 1, 2);
             
             numberOfDigits = factorialOfN(numbers[1], factorialDigits);
             Assert::AreEqual((int)strlen(factorials[1]), numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[1] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed", 1, 2);
             
             numberOfDigits = factorialOfN(numbers[2], factorialDigits);
             Assert::AreEqual((int)strlen(factorials[2]), numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[2] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[2], factorialString), L"factorail(" + numbers[2] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[2], factorialString), L"factorail(" + numbers[2] + ") failed", 1, 2);
         }
         
         [TestMethod, Timeout(40000)] // 40 sec
@@ -134,12 +134,12 @@ namespace spec
             int numberOfDigits = factorialOfN(numbers[0], factorialDigits);
             Assert::AreEqual((int)strlen(factorials[0]), numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[0] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[0], factorialString), L"factorail(" + numbers[0] + ") failed", 1, 2);
             
             numberOfDigits = factorialOfN(numbers[1], factorialDigits);
             Assert::AreEqual((int)strlen(factorials[1]), numberOfDigits, L"Wrong number of digits for factorialOf(" + numbers[1] + ")", 1, 2);
             stringFromDigits(factorialDigits, numberOfDigits, factorialString);
-            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed");
+            Assert::AreEqual(true, areEqualStrings(factorials[1], factorialString), L"factorail(" + numbers[1] + ") failed", 1, 2);
         }
         
         
@@ -160,27 +160,27 @@ namespace spec
             
             recamanSequence(input[0], output);
             result = areEqualArrays(sequence, output, input[0] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[0] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[0] + ") failed", 1, 2);
             
             recamanSequence(input[1], output);
             result = areEqualArrays(sequence, output, input[1] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[1] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[1] + ") failed", 1, 2);
             
             recamanSequence(input[2], output);
             result = areEqualArrays(sequence, output, input[2] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[2] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[2] + ") failed", 1, 2);
             
             recamanSequence(input[3], output);
             result = areEqualArrays(sequence, output, input[3] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[3] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[3] + ") failed", 1, 2);
             
             recamanSequence(input[4], output);
             result = areEqualArrays(sequence, output, input[4] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[4] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[4] + ") failed", 1, 2);
             
             recamanSequence(input[5], output);
             result = areEqualArrays(sequence, output, input[5] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[5] + ") failed");
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[5] + ") failed", 1, 2);
         }
         
         
