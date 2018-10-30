@@ -195,16 +195,40 @@ namespace spec
                 { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 28, 42, 56, 70, 84, 98},
                 { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 33, 66, 99},
                 { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100}
-            }
+            };
             int output[100];
             int count;
             bool result;
             
             count = palindromeNumbers(bases[0], output);
-            Assert::AreEqual(numberOfPalindromes[0], count, L"number of palindromes Wrong for base:" + bases[0] + L".", 1, 2);
+            Assert::AreEqual(numberOfPalindromes[0], count, L"Number of palindromes wrong for base:" + bases[0] + ".", 1, 2);
             result = areEqualArrays(expected[0], output, count);
             Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[0] + ") failed", 1, 2);
             
-
+            count = palindromeNumbers(bases[1], output);
+            Assert::AreEqual(numberOfPalindromes[1], count, L"Number of palindromes wrong for base:" + bases[1] + ".", 1, 2);
+            result = areEqualArrays(expected[1], output, count);
+            Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[1] + ") failed", 1, 2);
+            
+            count = palindromeNumbers(bases[2], output);
+            Assert::AreEqual(numberOfPalindromes[2], count, L"Number of palindromes wrong for base:" + bases[2] + ".", 1, 2);
+            result = areEqualArrays(expected[2], output, count);
+            Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[2] + ") failed", 1, 2);
+            
+            count = palindromeNumbers(bases[3], output);
+            Assert::AreEqual(numberOfPalindromes[3], count, L"Number of palindromes wrong for base:" + bases[3] + ".", 1, 2);
+            result = areEqualArrays(expected[3], output, count);
+            Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[3] + ") failed", 1, 2);
+            
+            count = palindromeNumbers(bases[4], output);
+            Assert::AreEqual(numberOfPalindromes[4], count, L"Number of palindromes wrong for base:" + bases[4] + ".", 1, 2);
+            result = areEqualArrays(expected[4], output, count);
+            Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[4] + ") failed", 1, 2);
+            
+            count = palindromeNumbers(bases[5], output);
+            Assert::AreEqual(numberOfPalindromes[5], count, L"Number of palindromes wrong for base:" + bases[5] + ".", 1, 2);
+            result = areEqualArrays(expected[0], output, count);
+            Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[5] + ") failed", 1, 2);
+        }
 	};
 }
