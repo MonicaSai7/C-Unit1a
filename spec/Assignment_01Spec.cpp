@@ -171,13 +171,13 @@ namespace spec
             int expectedEvens[][5] = {
                 { 8, 10, 12, 16, 18},
                 { 20, 22, 24, 26, 28}
-            }
+            };
             
-            count = closest5EvenNumbers(ns[0], evens);
+            closest5EvenNumbers(ns[0], evens);
             bool result = areEqualArrays(expectedEvens[0], evens, 5);
             Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[0] + ") failed", 1, 2);
             
-            count = closest5EvenNumbers(ns[1], evens);
+            closest5EvenNumbers(ns[1], evens);
             result = areEqualArrays(expectedEvens[1], evens, 5);
             Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[1] + ") failed", 1, 2);
         }
@@ -194,7 +194,7 @@ namespace spec
             int expectedPalindromes[][5] = {
                 { 3, 4, 5, 7, 8}, // n = 6, base-10
                 { 7, 8, 9, 11, 22} // 16, base-10
-            }
+            };
             
             closest5PalindromeNumbers(seeds[0], base[0], palindromes);
             bool result = areEqualArrays(expectedPalindromes[0], palindromes, 5);
@@ -219,7 +219,7 @@ namespace spec
                 { 0x202, 0x303, 0x404, 0x505, 0x606}, // 1000(0x3e8), base-256
                 { 970, 985, 999, 1013, 1027}, // 1000, base-14
                 { 951, 976, 1001, 1026, 1051} // 1000, base-25
-            }
+            };
             
             bool result;
             for (int testCase = 0; testCase < 6; testCase++) {
