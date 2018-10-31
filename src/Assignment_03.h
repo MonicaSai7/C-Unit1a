@@ -8,8 +8,8 @@
 
 int numberWithoutRepeatition(int numbers[], int size);
 
-void encodeWithPrime(int message[8], int n, int encodedMessage[8]);
-void decodeWithPrime(int message[8], int n, int decodedMessage[8]);
+void encodeWithNthPrime(int message[8], int n, int encodedMessage[8]);
+void decodeWithNthPrime(int message[8], int n, int decodedMessage[8]);
 
 unsigned int packHeader(int fromMobileId, int toMobileId, int msgId,
                         int msgLen, bool urgent, bool adHoc);

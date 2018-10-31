@@ -22,7 +22,7 @@ int numberWithoutRepeatition(int numbers[], int size) {
 // (message[i] ^ 11) - 1
 // since 11 is the 5'th prime. // 2, 3, 5, 7, 11...
 //
-void encodeWithPrime(int message[8], int n, int encodedMessage[8]) {
+void encodeWithNthPrime(int message[8], int n, int encodedMessage[8]) {
     
 }
 
@@ -32,7 +32,7 @@ void encodeWithPrime(int message[8], int n, int encodedMessage[8]) {
 //
 // output the decoded numbers in decodedMessage[8] array.
 //
-void decodeWithPrime(int message[8], int n, int decodedMessage[8]) {
+void decodeWithNthPrime(int message[8], int n, int decodedMessage[8]) {
     
 }
 
