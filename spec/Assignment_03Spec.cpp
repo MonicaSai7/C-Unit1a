@@ -114,7 +114,7 @@ namespace spec
             int expectedEncodedMsg[8] =  { 9, 8, 7, 14, 13, 12, 11, 2};
             int encodedMsg[8];
             encodeWithNthPrime(message, n, encodedMsg);
-            int result = areEqualArrays(expectedEncodedMsg, encodedMsg, 8);
+            bool result = areEqualArrays(expectedEncodedMsg, encodedMsg, 8);
             Assert::AreEqual(true, result, L"encodeWithNthPrime([1, 2, 3, 4, 5, 6, 7, 8], 5) failed", 1, 2);
         }
             
@@ -126,7 +126,7 @@ namespace spec
             int encodedMsg[8] =  { 9, 8, 7, 14, 13, 12, 11, 2};
             int decodedMsg[8];
             decodeWithNthPrime(encodedMsg, n, decodedMsg);
-            int result = areEqualArrays(expectedMessage, decodedMsg, 8);
+            bool result = areEqualArrays(expectedMessage, decodedMsg, 8);
             Assert::AreEqual(true, result, L"decodeWithNthPrime([9, 8, 7, 14, 13, 12, 11, 2], 5) failed", 1, 2);
         }
         
@@ -138,7 +138,7 @@ namespace spec
             int expectedEncodedMsg[8] =  { 521, 520, 519, 526, 525, 524, 523, 514};
             
             int encodedMsg[8];
-            int result;
+            bool result;
             
             encodeWithNthPrime(message, n, encodedMsg);
             result = areEqualArrays(expectedEncodedMsg, encodedMsg, 8);
@@ -162,7 +162,7 @@ namespace spec
             };
             
             int encodedMsg[8];
-            int result;
+            bool result;
             
             encodeWithNthPrime(message, nKeys[0], encodedMsg);
             result = areEqualArrays(expectedEncodedMsg[0], encodedMsg, 8);
@@ -194,7 +194,7 @@ namespace spec
             };
             
             int encodedMsg[8];
-            int result;
+            bool result;
             
             encodeWithNthPrime(message, nKeys[0], encodedMsg);
             result = areEqualArrays(expectedEncodedMsg[0], encodedMsg, 8);
