@@ -82,7 +82,7 @@ namespace spec
          
          n = 100;
          { 1, 2, 3, 4, 5, 6, 7, 8}
-         { 521, 520, 519, 526, 525, 524, 523, 514}
+         { 539, 542, 541, 536, 535, 538, 537, 532}
          { 1, 2, 3, 4, 5, 6, 7, 8}
          
          n = 0xbad
@@ -135,7 +135,7 @@ namespace spec
             
             int n = 100;
             int message[8] = { 1, 2, 3, 4, 5, 6, 7, 8};
-            int expectedEncodedMsg[8] =  { 521, 520, 519, 526, 525, 524, 523, 514};
+            int expectedEncodedMsg[8] =  { 539, 542, 541, 536, 535, 538, 537, 532};
             
             int encodedMsg[8];
             bool result;
@@ -147,7 +147,7 @@ namespace spec
             int decodedMsg[8];
             decodeWithNthPrime(encodedMsg, n, decodedMsg);
             result = areEqualArrays(message, decodedMsg, 8);
-            Assert::AreEqual(true, result, L"decodeWithNthPrime({ 521, 520, 519, 526, 525, 524, 523, 514}, 100) failed", 1, 2);
+            Assert::AreEqual(true, result, L"decodeWithNthPrime([539, 542, 541, 536, 535, 538, 537, 532], 100) failed", 1, 2);
             
         }
         
@@ -157,8 +157,8 @@ namespace spec
             int nKeys[] = {0xbad, 0xdad};
             int message[8] = { -341, 342, -8533, 90034, -23455, 2946, -7, -80};
             int expectedEncodedMsg[][8] =  {
-                { -27593, 27588, -19401, 79136, -12559, 24848, -27287, -27358},
-                { -32311, 32310, -24119, 73938, -9473, 29922, -32617, -32560}
+                { -27641, 27636, -19449, 79120, -12607, 24864, -27303, -27374},
+                { -32313, 32308, -24121, 73936, -9471, 29920, -32615, -32558}
             };
             
             int encodedMsg[8];
@@ -166,31 +166,31 @@ namespace spec
             
             encodeWithNthPrime(message, nKeys[0], encodedMsg);
             result = areEqualArrays(expectedEncodedMsg[0], encodedMsg, 8);
-            Assert::AreEqual(true, result, L"encodeWithNthPrime([-341, 342, -8533, 90034, -23455, 2946, -7, -80], 0xbad) failed", 1, 2);
+            Assert::AreEqual(true, result, L"encodeWithNthPrime([...], 0xbad) failed", 1, 2);
             
             int decodedMsg[8];
             decodeWithNthPrime(encodedMsg, nKeys[0], decodedMsg);
             result = areEqualArrays(message, decodedMsg, 8);
-            Assert::AreEqual(true, result, L"decodeWithNthPrime([-27593, 27588, -19401, 79136, -12559, 24848, -27287, -27358], 0xbad) failed", 1, 2);
+            Assert::AreEqual(true, result, L"decodeWithNthPrime([...], 0xbad) failed", 1, 2);
             
             
             encodeWithNthPrime(message, nKeys[1], encodedMsg);
             result = areEqualArrays(expectedEncodedMsg[1], encodedMsg, 8);
-            Assert::AreEqual(true, result, L"encodeWithNthPrime([-341, 342, -8533, 90034, -23455, 2946, -7, -80], 0xdad) failed", 1, 2);
+            Assert::AreEqual(true, result, L"encodeWithNthPrime([...], 0xdad) failed", 1, 2);
             
             decodeWithNthPrime(encodedMsg, nKeys[1], decodedMsg);
             result = areEqualArrays(message, decodedMsg, 8);
-            Assert::AreEqual(true, result, L"decodeWithNthPrime([-32311, 32310, -24119, 73938, -9473, 29922, -32617, -32560], 0xdad) failed", 1, 2);
+            Assert::AreEqual(true, result, L"decodeWithNthPrime([...], 0xdad) failed", 1, 2);
         }
         
         [TestMethod, Timeout(40000)] // 40 sec
         void Test_EncodeAndDecode2() {
             
             int nKeys[] = {0xabc, 0x123};
-            int message[8] = {  0xabc, 0xbcd, 0xcde, 0xdef, 0xef0, 0xf01, 0x12, 0x123};
+            int message[8] = { 0xabc, 0xbcd, 0xcde, 0xdef, 0xef0, 0xf01, 0x12, 0x123};
             int expectedEncodedMsg[][8] =  {
-                { 0x6bb2, 0x6ac1, 0x6dd0, 0x6cdf, 0x6ffe, 0x6e0d, 0x611c, 0x602b},
-                { 0xddc, 0xcab, 0xbbe, 0xa8d, 0x990, 0x85f, 0x772, 0x641}
+                { 0x6bae, 0x6add, 0x6dcc, 0x6cfb, 0x6fe2, 0x6e11, 0x6100, 0x602f},
+                { 0xdd0, 0xc9f, 0xbb2, 0xa81, 0x99c, 0x86b, 0x77e, 0x64d}
             };
             
             int encodedMsg[8];
