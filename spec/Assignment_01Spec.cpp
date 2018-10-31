@@ -109,7 +109,7 @@ namespace spec
         //
         // Tests for palindromeNumbers function
         //
-        [TestMethod, Timeout(3000)]
+        [TestMethod, Timeout(40000)]  // 40 sec
         void Test_palindromeNumbers() {
             
             int bases[6] = {2, 7, 10, 13, 32, 256};
@@ -155,6 +155,78 @@ namespace spec
             Assert::AreEqual(numberOfPalindromes[5], count, L"Number of palindromes wrong for base:" + bases[5] + ".", 1, 2);
             result = areEqualArrays(expected[5], output, count);
             Assert::AreEqual(true, result, L"palindromeNumbers(" + bases[5] + ") failed", 1, 2);
+        }
+        
+        
+        //
+        // Tests for closest5EvenNumbers function
+        //
+        [TestMethod, Timeout(3000)]
+        void Test_closest5EvenNumbers() {
+            // 14  => { 8, 10, 12, 16, 18}; // 8 and 20 are at equal distance from 14, we pick 8.
+            // 25  => { 20, 22, 24, 26, 28}; // 20 and 30 are at equal distance from 25, we pick 20.
+            //
+            int ns[2] = {14, 25};
+            int evens[5];
+            int expectedEvens[][5] = {
+                { 8, 10, 12, 16, 18},
+                { 20, 22, 24, 26, 28}
+            }
+            
+            count = closest5EvenNumbers(ns[0], evens);
+            bool result = areEqualArrays(expectedEvens[0], evens, 5);
+            Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[0] + ") failed", 1, 2);
+            
+            count = closest5EvenNumbers(ns[1], evens);
+            result = areEqualArrays(expectedEvens[1], evens, 5);
+            Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[1] + ") failed", 1, 2);
+        }
+        
+        //
+        // Tests for closest5PalindromeNumbers function
+        //
+        [TestMethod, Timeout(3000)]
+        void Test_closest5PalindromeNumbers0() {
+ 
+            int base[] = {10, 10};
+            int seeds[] = {6, 16};
+            int palindromes[5];
+            int expectedPalindromes[][5] = {
+                { 3, 4, 5, 7, 8}, // n = 6, base-10
+                { 7, 8, 9, 11, 22} // 16, base-10
+            }
+            
+            closest5PalindromeNumbers(seeds[0], base[0], palindromes);
+            bool result = areEqualArrays(expectedPalindromes[0], palindromes, 5);
+            Assert::AreEqual(true, result, L"closest5PalindromeNumbers(" + seeds[0] + ", " + base[0] + ") failed", 1, 2);
+
+            closest5PalindromeNumbers(seeds[1], base[1], palindromes);
+            result = areEqualArrays(expectedPalindromes[1], palindromes, 5);
+            Assert::AreEqual(true, result, L"closest5PalindromeNumbers(" + seeds[1] + ", " + base[1] + ") failed", 1, 2);
+            
+        }
+        
+        [TestMethod, Timeout(40000)] // 40 sec
+        void Test_closest5PalindromeNumbers1() {
+            
+            int base[] = {16, 10, 16, 256, 14, 25};
+            int seeds[] = {16, 1000, 1000, 1000, 1000, 1000};
+            int palindromes[5];
+            int expectedPalindromes[][5] = {
+                { 0xc, 0xd, 0xe, 0xf, 0x11}, // 16, base-16
+                { 969, 979, 989, 999, 1001}, // 1000, base-10
+                { 0x3c3, 0x3d3, 0x3e3, 0x3f3, 0x404}, // 1000(0x3e8), base-16
+                { 0x202, 0x303, 0x404, 0x505, 0x606}, // 1000(0x3e8), base-256
+                { 970, 985, 999, 1013, 1027}, // 1000, base-14
+                { 951, 976, 1001, 1026, 1051} // 1000, base-25
+            }
+            
+            bool result;
+            for (int testCase = 0; testCase < 6; testCase++) {
+                closest5PalindromeNumbers(seeds[testCase], base[testCase], palindromes);
+                result = areEqualArrays(expectedPalindromes[testCase], palindromes, 5);
+                Assert::AreEqual(true, result, L"closest5PalindromeNumbers(" + seeds[testCase] + ", " + base[testCase] + ") failed", 1, 2);
+            }
         }
 	};
 }

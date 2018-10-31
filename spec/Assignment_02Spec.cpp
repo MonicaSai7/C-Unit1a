@@ -181,6 +181,10 @@ namespace spec
             recamanSequence(input[5], output);
             result = areEqualArrays(sequence, output, input[5] + 1);
             Assert::AreEqual(true, result, L"recamanSequence(" + input[5] + ") failed", 1, 2);
+            
+            recamanSequence(input[6], output);
+            result = areEqualArrays(sequence, output, input[6] + 1);
+            Assert::AreEqual(true, result, L"recamanSequence(" + input[6] + ") failed", 1, 2);
         }
         
         

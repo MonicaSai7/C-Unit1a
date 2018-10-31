@@ -40,19 +40,6 @@ int palindromeNumbers(int b, int numbers[]) {
 }
 
 //
-// Write a function that finds the first 20 positive integers
-// that are palindrome primes in base b.
-//
-// b > 1
-//
-// https://en.wikipedia.org/wiki/Palindromic_prime
-//
-void first20PalindromicPrimes(int b, int palindromes[20]) {
-    
-}
-
-
-//
 // Write a function that finds the closest (to n) 5 positive integers
 // that are even
 //
