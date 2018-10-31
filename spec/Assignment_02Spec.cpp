@@ -158,33 +158,11 @@ namespace spec
             int output[71];
             bool result;
             
-            recamanSequence(input[0], output);
-            result = areEqualArrays(sequence, output, input[0] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[0] + ") failed", 1, 2);
-            
-            recamanSequence(input[1], output);
-            result = areEqualArrays(sequence, output, input[1] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[1] + ") failed", 1, 2);
-            
-            recamanSequence(input[2], output);
-            result = areEqualArrays(sequence, output, input[2] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[2] + ") failed", 1, 2);
-            
-            recamanSequence(input[3], output);
-            result = areEqualArrays(sequence, output, input[3] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[3] + ") failed", 1, 2);
-            
-            recamanSequence(input[4], output);
-            result = areEqualArrays(sequence, output, input[4] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[4] + ") failed", 1, 2);
-            
-            recamanSequence(input[5], output);
-            result = areEqualArrays(sequence, output, input[5] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[5] + ") failed", 1, 2);
-            
-            recamanSequence(input[6], output);
-            result = areEqualArrays(sequence, output, input[6] + 1);
-            Assert::AreEqual(true, result, L"recamanSequence(" + input[6] + ") failed", 1, 2);
+            for (int testCase = 0; testCase < 7; testCase++) {
+                recamanSequence(input[testCase], output);
+                result = areEqualArrays(sequence, output, input[testCase] + 1);
+                Assert::AreEqual(true, result, L"recamanSequence(" + input[testCase] + ") failed", 1, 2);
+            }
         }
         
         
