@@ -274,7 +274,7 @@ namespace spec
                              result+3, &urgent, &adHoc);
                 result[4] = urgent ? 1 : 0;
                 result[5] = adHoc ? 1 : 0;
-                bool resultMatched = areEqualArrays(expected, result, 6);
+                bool resultMatched = areEqualArrays(testCase, result, 6);
                 Assert::AreEqual(true, resultMatched, L"unpackHeader() failed", 1, 2);
             }
         }
