@@ -214,5 +214,70 @@ namespace spec
             result = areEqualArrays(message, decodedMsg, 8);
             Assert::AreEqual(true, result, L"decodeWithNthPrime() failed", 1, 2);
         }
+        
+        [TestMethod, Timeout(3000)]
+        void Test_packHeader() {
+            int testCase[] = { 127, 64, 63, 32, 1, 1};
+            unsigned int expectedHeader = 0xff01fa03;
+            unsigned int header;
+            header = packHeader(testCase[0], testCase[1], testCase[2],
+                                testCase[3], (testCase[4] == 1), (testCase[4] == 1));
+            Assert::AreEqual(expectedHeader, header, L"packHeader Failed", 1, 2);
+        }
+        
+        [TestMethod, Timeout(3000)]
+        void Test_unpackHeader() {
+            int expected[] = { 127, 64, 63, 32, 1, 1};
+            int result[6];
+            bool urgent, adHoc;
+            unsigned int header = 0xff01fa03;
+            unpackHeader(header, result, result+1, result+2,
+                         result+3, &urgent, &adHoc);
+            result[4] = urgent ? 1 : 0;
+            result[5] = adHoc ? 1 : 0;
+            bool resultMatched = areEqualArrays(expected, result, 6);
+            Assert::AreEqual(true, resultMatched, L"unpackHeader() failed", 1, 2);
+        }
+        
+        [TestMethod, Timeout(3000)]
+        void Test_packAndUnpackHeader() {
+            int testCases[][6] = {
+                { 99, 88, 77, 66, 1, 0},
+                { 0x7F, 0x7F, 0x7F, 0x7F, 1, 1},
+                { 0x7, 0x7F, 0x7, 0x7F, 1, 1},
+                { 0x1A, 0x2B, 0x3C, 0x4D, 0, 0},
+                { 0, 0, 0, 0, 0, 0}
+            };
+            unsigned int expectedHeaders[] = {
+                0xc7626c22,
+                0xfffffff3,
+                0xffc3ff3,
+                0x34ade4d0,
+                0x0
+            };
+            
+            for (int i = 0; i < 5; i++) {
+                
+                // pack header
+                int *testCase = testCases[i];
+                unsigned int expectedHeader = expectedHeaders[i];
+                unsigned int header;
+                header = packHeader(testCase[0], testCase[1], testCase[2],
+                                    testCase[3], (testCase[4] == 1), (testCase[4] == 1));
+                Assert::AreEqual(expectedHeader, header, L"packHeader() Failed", 1, 2);
+                
+                
+                // unpack header
+                bool urgent, adHoc;
+                int result[6];
+                unpackHeader(header, result, result+1, result+2,
+                             result+3, &urgent, &adHoc);
+                result[4] = urgent ? 1 : 0;
+                result[5] = adHoc ? 1 : 0;
+                bool resultMatched = areEqualArrays(expected, result, 6);
+                Assert::AreEqual(true, resultMatched, L"unpackHeader() failed", 1, 2);
+            }
+        }
+        
 	};
 }
