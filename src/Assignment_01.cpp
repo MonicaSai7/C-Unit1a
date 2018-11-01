@@ -2,7 +2,12 @@
 Note:
 1. Read instructions for each function carefully.
 2. Feel free to create new functions if needed. Give good names!
-...
+3. Check the reference links when ever given.
+4. After solving the question and making corresponding test cases pass
+   - reflect on where is the gap in your understanding, while solving the problem.
+   - if you have to create a similar problem, how would you do/tweek it?
+   - when your friends seek help, instead of explaining your logic,
+     give hints to solve. Always.
 */
 
 //
@@ -24,6 +29,7 @@ void butterflyNumber(int n, char butterfly[23]) {
 // that are palindromes in base b
 //
 // b > 1
+//
 // saves a list of base–10 numbers less than or equal to 100
 // that are palindromic in base b.
 // and return the count.
