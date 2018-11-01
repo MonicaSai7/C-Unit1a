@@ -221,7 +221,7 @@ namespace spec
             unsigned int expectedHeader = 0xff01fa03;
             unsigned int header;
             header = packHeader(testCase[0], testCase[1], testCase[2],
-                                testCase[3], (testCase[4] == 1), (testCase[4] == 1));
+                                testCase[3], (testCase[4] == 1), (testCase[5] == 1));
             Assert::AreEqual(expectedHeader, header, L"packHeader Failed", 1, 2);
         }
         
