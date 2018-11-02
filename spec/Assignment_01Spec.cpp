@@ -166,20 +166,23 @@ namespace spec
             // 14  => { 8, 10, 12, 16, 18}; // 8 and 20 are at equal distance from 14, we pick 8.
             // 25  => { 20, 22, 24, 26, 28}; // 20 and 30 are at equal distance from 25, we pick 20.
             //
-            int ns[2] = {14, 25};
+            int ns[6] = {14, 25, 1, 4, 7, 6};
             int evens[5];
             int expectedEvens[][5] = {
                 { 8, 10, 12, 16, 18},
-                { 20, 22, 24, 26, 28}
+                { 20, 22, 24, 26, 28},
+                { 2, 4, 6, 8, 10},
+                { 2, 6, 8, 10, 12},
+                { 2, 4, 6, 8, 10},
+                { 2, 4, 8, 10, 12}
             };
             
-            closest5EvenNumbers(ns[0], evens);
-            bool result = areEqualArrays(expectedEvens[0], evens, 5);
-            Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[0] + ") failed", 1, 2);
-            
-            closest5EvenNumbers(ns[1], evens);
-            result = areEqualArrays(expectedEvens[1], evens, 5);
-            Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[1] + ") failed", 1, 2);
+            bool result;
+            for (int testCase = 0; testCase < 6; testCase++) {
+                closest5EvenNumbers(ns[testCase], evens);
+                result = areEqualArrays(expectedEvens[testCase], evens, 5);
+                Assert::AreEqual(true, result, L"closest5EvenNumbers(" + ns[testCase] + ") failed", 1, 2);
+            }
         }
         
         //
@@ -226,6 +229,28 @@ namespace spec
                 closest5PalindromeNumbers(seeds[testCase], base[testCase], palindromes);
                 result = areEqualArrays(expectedPalindromes[testCase], palindromes, 5);
                 Assert::AreEqual(true, result, L"closest5PalindromeNumbers(" + seeds[testCase] + ", " + base[testCase] + ") failed", 1, 2);
+            }
+        }
+        
+        [TestMethod, Timeout(40000)] // 40 sec
+        void Test_closest5PalindromeNumbers2() {
+            
+            int base[] = {16, 10, 2, 3, 4};
+            int seed = 3;
+            int palindromes[5];
+            int expectedPalindromes[][5] = {
+                { 1, 2, 4, 5, 6}, // 3, base-16
+                { 1, 2, 4, 5, 6}, // 3, base-10
+                { 1, 5, 7, 9, 15}, // 3, base-2
+                { 1, 2, 4, 8, 10}, // 3, base-3
+                { 1, 2, 5, 10, 15}, // 3, base-4
+            };
+            
+            bool result;
+            for (int testCase = 0; testCase < 5; testCase++) {
+                closest5PalindromeNumbers(seed, base[testCase], palindromes);
+                result = areEqualArrays(expectedPalindromes[testCase], palindromes, 5);
+                Assert::AreEqual(true, result, L"closest5PalindromeNumbers(" + seed + ", " + base[testCase] + ") failed", 1, 2);
             }
         }
 	};

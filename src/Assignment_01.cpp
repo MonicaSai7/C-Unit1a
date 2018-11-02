@@ -49,7 +49,7 @@ int palindromeNumbers(int b, int numbers[]) {
 // Write a function that finds the closest (to n) 5 positive integers
 // that are even
 //
-// return a sorted list of assending order.
+// return a sorted list of assending order even numbers (greater than zero).
 //
 // Note:
 // In case of conflict return the smallest number.
@@ -60,7 +60,10 @@ int palindromeNumbers(int b, int numbers[]) {
 // 14  => { 8, 10, 12, 16, 18}; // 8 and 20 are at equal distance from 14, we pick 8.
 // 15  => { 10, 12, 14, 16, 18}; // 10 and 20 are at equal distance from 15, we pick 10.
 //
-
+// Ref: https://en.wikipedia.org/wiki/Parity_of_zero
+//
+// Note: You must return only numbers which are greater than zero.
+//
 void closest5EvenNumbers(int n, int evens[5]) {
     
 }
@@ -74,9 +77,11 @@ void closest5EvenNumbers(int n, int evens[5]) {
 // return a sorted list of assending order.
 //
 // Note:
-// In case of conflict return the smallest number.
-// let us say for the 5th element, 2 numbers are at same distance from n.
-// then include the smallest of the 2 numbers.
+// 1. In case of conflict return the smallest number.
+//    let us say for the 5th element, 2 numbers are at same distance from n.
+//    then include the smallest of the 2 numbers.
+// 2. Palindromes must be greater than zero.
+//    for i = 0 to 4, palindromes[i] > 0.
 //
 void closest5PalindromeNumbers(int n, int b, int palindromes[5]) {
     
