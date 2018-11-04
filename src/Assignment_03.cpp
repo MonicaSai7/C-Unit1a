@@ -51,6 +51,12 @@ void decodeWithNthPrime(int message[8], int n, int decodedMessage[8]) {
 // Note:
 // The values will be in the range
 // 0 <= fromMobileId, toMobileId, msgId, msgLen <= 127
+//
+// The reserved bits should be set to zero.
+//
+// For the context refer:
+// https://en.wikipedia.org/wiki/Transmission_Control_Protocol#TCP_segment_structure
+//
 unsigned int packHeader(int fromMobileId, int toMobileId, int msgId,
                         int msgLen, bool urgent, bool adHoc) {
     return 0;
